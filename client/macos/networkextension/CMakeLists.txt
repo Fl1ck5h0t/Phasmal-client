@@ -1,23 +1,23 @@
-enable_language(Swift)
-message("Client message >> macos build >> AmneziaVPNNetworkExtension")
+﻿enable_language(Swift)
+message("Client message >> macos build >> PhasmalVPNNetworkExtension")
 set(CLIENT_ROOT_DIR ${CMAKE_CURRENT_LIST_DIR}/../..)
 
-add_executable(AmneziaVPNNetworkExtension)
+add_executable(PhasmalVPNNetworkExtension)
 
 message("executable_path is: @executable_path/../../Frameworks")
-set_target_properties(AmneziaVPNNetworkExtension PROPERTIES
+set_target_properties(PhasmalVPNNetworkExtension PROPERTIES
     XCODE_PRODUCT_TYPE com.apple.product-type.app-extension
     # MACOSX_BUNDLE YES
     BUNDLE_EXTENSION appex
     MACOSX_BUNDLE_SHORT_VERSION_STRING "${APPLE_PROJECT_VERSION}"
-    MACOSX_BUNDLE_INFO_STRING "AmneziaVPNNetworkExtension"
-    MACOSX_BUNDLE_BUNDLE_NAME "AmneziaVPNNetworkExtension"
+    MACOSX_BUNDLE_INFO_STRING "PhasmalVPNNetworkExtension"
+    MACOSX_BUNDLE_BUNDLE_NAME "PhasmalVPNNetworkExtension"
     XCODE_ATTRIBUTE_PRODUCT_BUNDLE_IDENTIFIER "${BUILD_IOS_APP_IDENTIFIER}.network-extension"
     XCODE_ATTRIBUTE_PRODUCT_BUNDLE_NAME "${BUILD_IOS_APP_IDENTIFIER}.network-extension"
-    XCODE_ATTRIBUTE_CODE_SIGN_ENTITLEMENTS ${CMAKE_CURRENT_SOURCE_DIR}/AmneziaVPNNetworkExtension.entitlements
+    XCODE_ATTRIBUTE_CODE_SIGN_ENTITLEMENTS ${CMAKE_CURRENT_SOURCE_DIR}/PhasmalVPNNetworkExtension.entitlements
     XCODE_ATTRIBUTE_MARKETING_VERSION "${APP_MAJOR_VERSION}"
     XCODE_ATTRIBUTE_CURRENT_PROJECT_VERSION "${CMAKE_PROJECT_VERSION_TWEAK}"
-    XCODE_ATTRIBUTE_PRODUCT_NAME "AmneziaVPNNetworkExtension"
+    XCODE_ATTRIBUTE_PRODUCT_NAME "PhasmalVPNNetworkExtension"
 
     XCODE_ATTRIBUTE_APPLICATION_EXTENSION_API_ONLY "YES"
     XCODE_ATTRIBUTE_ENABLE_BITCODE "NO"
@@ -29,20 +29,20 @@ set_target_properties(AmneziaVPNNetworkExtension PROPERTIES
 
 if(DEPLOY)
     message("DEPLOY is ON")
-    set_target_properties(AmneziaVPNNetworkExtension PROPERTIES
+    set_target_properties(PhasmalVPNNetworkExtension PROPERTIES
         XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY "Apple Distribution"
         XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY[variant=Debug] "Apple Development"
         XCODE_ATTRIBUTE_CODE_SIGN_STYLE Manual
-        XCODE_ATTRIBUTE_PROVISIONING_PROFILE_SPECIFIER "distr macos.org.amnezia.amneziaVPN.NE"
-        XCODE_ATTRIBUTE_PROVISIONING_PROFILE_SPECIFIER[variant=Debug] "dev macos.org.amnezia.amneziaVPN.NE"
+        XCODE_ATTRIBUTE_PROVISIONING_PROFILE_SPECIFIER "distr macos.com.phasmal.PhasmalVPN.NE"
+        XCODE_ATTRIBUTE_PROVISIONING_PROFILE_SPECIFIER[variant=Debug] "dev macos.com.phasmal.PhasmalVPN.NE"
     )
 else()
-    set_target_properties(AmneziaVPNNetworkExtension PROPERTIES
+    set_target_properties(PhasmalVPNNetworkExtension PROPERTIES
         XCODE_ATTRIBUTE_CODE_SIGN_STYLE Automatic
     )
 endif()
 
-set_target_properties(AmneziaVPNNetworkExtension PROPERTIES
+set_target_properties(PhasmalVPNNetworkExtension PROPERTIES
     XCODE_ATTRIBUTE_SWIFT_VERSION "5.0"
     XCODE_ATTRIBUTE_CLANG_ENABLE_MODULES "YES"
     XCODE_ATTRIBUTE_SWIFT_OBJC_BRIDGING_HEADER "${CMAKE_CURRENT_SOURCE_DIR}/WireGuardNetworkExtension-Bridging-Header.h"
@@ -50,7 +50,7 @@ set_target_properties(AmneziaVPNNetworkExtension PROPERTIES
     XCODE_ATTRIBUTE_SWIFT_PRECOMPILE_BRIDGING_HEADER "NO"
 )
 
-set_target_properties("AmneziaVPNNetworkExtension" PROPERTIES
+set_target_properties("PhasmalVPNNetworkExtension" PROPERTIES
     XCODE_ATTRIBUTE_DEVELOPMENT_TEAM "X7UJ388FXK"
 )
 
@@ -63,17 +63,17 @@ find_library(FW_LIBRESOLV libresolv.9.tbd)
 # Set the root directory
 set(CLIENT_ROOT_DIR ${CMAKE_CURRENT_LIST_DIR}/../..)
 
-target_link_libraries(AmneziaVPNNetworkExtension PRIVATE ${FW_LIBRESOLV})
+target_link_libraries(PhasmalVPNNetworkExtension PRIVATE ${FW_LIBRESOLV})
 
-target_compile_options(AmneziaVPNNetworkExtension PRIVATE -DGROUP_ID=\"${BUILD_IOS_GROUP_IDENTIFIER}\")
-target_compile_options(AmneziaVPNNetworkExtension PRIVATE -DNETWORK_EXTENSION=1)
+target_compile_options(PhasmalVPNNetworkExtension PRIVATE -DGROUP_ID=\"${BUILD_IOS_GROUP_IDENTIFIER}\")
+target_compile_options(PhasmalVPNNetworkExtension PRIVATE -DNETWORK_EXTENSION=1)
 
 set(WG_APPLE_SOURCE_DIR ${CLIENT_ROOT_DIR}/3rd/amneziawg-apple/Sources)
 
 message("WG_APPLE_SOURCE_DIR is: ${WG_APPLE_SOURCE_DIR}")
 message("CLIENT_ROOT_DIR is: ${CLIENT_ROOT_DIR}")
 
-target_sources(AmneziaVPNNetworkExtension PRIVATE
+target_sources(PhasmalVPNNetworkExtension PRIVATE
     ${WG_APPLE_SOURCE_DIR}/WireGuardKit/WireGuardAdapter.swift
     ${WG_APPLE_SOURCE_DIR}/WireGuardKit/PacketTunnelSettingsGenerator.swift
     ${WG_APPLE_SOURCE_DIR}/WireGuardKit/DNSResolver.swift
@@ -106,22 +106,22 @@ target_sources(AmneziaVPNNetworkExtension PRIVATE
     ${CLIENT_ROOT_DIR}/platforms/ios/XrayConfig.swift
 )
 
-target_sources(AmneziaVPNNetworkExtension PRIVATE
+target_sources(PhasmalVPNNetworkExtension PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/PrivacyInfo.xcprivacy
 )
 
-set_property(TARGET AmneziaVPNNetworkExtension APPEND PROPERTY RESOURCE
+set_property(TARGET PhasmalVPNNetworkExtension APPEND PROPERTY RESOURCE
     ${CMAKE_CURRENT_SOURCE_DIR}/PrivacyInfo.xcprivacy
 )
 
-target_include_directories(AmneziaVPNNetworkExtension PRIVATE ${CLIENT_ROOT_DIR})
-target_include_directories(AmneziaVPNNetworkExtension PRIVATE ${CMAKE_CURRENT_BINARY_DIR})
+target_include_directories(PhasmalVPNNetworkExtension PRIVATE ${CLIENT_ROOT_DIR})
+target_include_directories(PhasmalVPNNetworkExtension PRIVATE ${CMAKE_CURRENT_BINARY_DIR})
 
 find_package(openvpnadapter REQUIRED)
-target_link_libraries(AmneziaVPNNetworkExtension PRIVATE amnezia::openvpnadapter)
+target_link_libraries(PhasmalVPNNetworkExtension PRIVATE amnezia::openvpnadapter)
 
 find_package(awg-apple REQUIRED)
-target_link_libraries(AmneziaVPNNetworkExtension PRIVATE amnezia::awg-apple)
+target_link_libraries(PhasmalVPNNetworkExtension PRIVATE amnezia::awg-apple)
 
 find_package(hev-socks5-tunnel REQUIRED)
-target_link_libraries(AmneziaVPNNetworkExtension PRIVATE heiher::hev-socks5-tunnel)
+target_link_libraries(PhasmalVPNNetworkExtension PRIVATE heiher::hev-socks5-tunnel)

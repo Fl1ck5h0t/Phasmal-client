@@ -1,4 +1,4 @@
-#ifndef IKEV2_VPN_PROTOCOL_WINDOWS_H
+﻿#ifndef IKEV2_VPN_PROTOCOL_WINDOWS_H
 #define IKEV2_VPN_PROTOCOL_WINDOWS_H
 
 #include <QObject>
@@ -41,7 +41,7 @@ public:
     ErrorCode start() override;
     void stop() override;
 
-    static QString tunnelName() { return "AmneziaVPN IKEv2"; }
+    static QString tunnelName() { return "PhasmalVPN IKEv2"; }
 
 public:
     void newConnectionStateEventReceived(UINT unMsg,

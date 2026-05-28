@@ -1,4 +1,4 @@
-import QtQuick
+﻿import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 
@@ -86,7 +86,7 @@ PageType {
                     Layout.fillWidth: true
                     headerText: qsTr("XRay VLESS settings")
                     descriptionLinkText: qsTr("More about settings")
-                    descriptionLinkUrl: "https://docs.amnezia.org"
+                    descriptionLinkUrl: "https://docs.phasmalvpn.com"
                 }
 
                 ImageButtonType {

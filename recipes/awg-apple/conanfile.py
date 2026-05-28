@@ -1,4 +1,4 @@
-from conan import ConanFile
+﻿from conan import ConanFile
 from conan.errors import ConanInvalidConfiguration
 from conan.tools.layout import basic_layout
 from conan.tools.files import get, copy, collect_libs
@@ -38,7 +38,7 @@ class AwgApple(ConanFile):
             )
 
     def source(self):
-        get(self, f"https://github.com/amnezia-vpn/amneziawg-apple/archive/refs/tags/v{self.version}.zip",
+        get(self, f"https://github.com/phasmal-vpn/amneziawg-apple/archive/refs/tags/v{self.version}.zip",
             sha256="9fe4f8cfbb6a751558b54b7979db3a5ea46e49731912aae99f093e84a1433e97", strip_root=True
         )
 

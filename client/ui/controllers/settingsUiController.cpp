@@ -1,4 +1,4 @@
-#include "settingsUiController.h"
+﻿#include "settingsUiController.h"
 
 #include <QDebug>
 #include <QStandardPaths>
@@ -17,7 +17,7 @@
 #endif
 
 #if defined(Q_OS_IOS) || defined(MACOS_NE)
-    #include <AmneziaVPN-Swift.h>
+    #include <PhasmalVPN-Swift.h>
 #endif
 
 SettingsUiController::SettingsUiController(SettingsController* settingsController,
@@ -83,7 +83,7 @@ void SettingsUiController::toggleLogging(bool enable)
 {
     m_settingsController->toggleLogging(enable);
 #if defined(Q_OS_IOS)
-    AmneziaVPN::toggleLogging(enable);
+    PhasmalVPN::toggleLogging(enable);
 #endif
     if (enable == true) {
         qInfo().noquote() << QString("Logging has enabled on %1 version %2 %3").arg(APPLICATION_NAME, APP_VERSION, GIT_COMMIT_HASH);
@@ -184,7 +184,7 @@ void SettingsUiController::clearSettings()
     emit changeSettingsFinished(tr("All settings have been reset to default values"));
 
 #if defined(Q_OS_IOS) || defined(MACOS_NE)
-    AmneziaVPN::clearSettings();
+    PhasmalVPN::clearSettings();
 #endif
 }
 

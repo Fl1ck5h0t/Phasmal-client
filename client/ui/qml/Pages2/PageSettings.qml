@@ -1,4 +1,4 @@
-import QtQuick
+﻿import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import QtQuick.Dialogs
@@ -174,7 +174,7 @@ PageType {
     QtObject {
         id: about
 
-        property string title: qsTr("About AmneziaVPN")
+        property string title: qsTr("About PhasmalVPN")
         readonly property string leftImagePath: "qrc:/images/controls/amnezia.svg"
         property bool isVisible: true
         readonly property var clickedHandler: function() {

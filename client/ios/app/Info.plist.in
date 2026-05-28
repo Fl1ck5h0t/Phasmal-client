@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
@@ -31,7 +31,7 @@
 	<key>LSSupportsOpeningDocumentsInPlace</key>
 	<false/>
 	<key>UILaunchStoryboardName</key>
-	<string>AmneziaVPNLaunchScreen</string>
+	<string>PhasmalVPNLaunchScreen</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -70,11 +70,11 @@
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
 	<key>com.wireguard.ios.app_group_id</key>
-	<string>group.org.amnezia.AmneziaVPN</string>
+	<string>group.com.phasmal.PhasmalVPN</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>Amnezia VPN needs access to the camera for reading QR-codes.</string>
+	<string>Phasmal VPN needs access to the camera for reading QR-codes.</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -94,11 +94,11 @@
 				<string>public.data</string>
 			</array>
 			<key>UTTypeDescription</key>
-			<string>Amnezia VPN config</string>
+			<string>Phasmal VPN config</string>
 			<key>UTTypeIconFiles</key>
 			<array/>
 			<key>UTTypeIdentifier</key>
-			<string>org.amnezia.AmneziaVPN.amnezia-config</string>
+			<string>com.phasmal.PhasmalVPN.amnezia-config</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
@@ -121,7 +121,7 @@
                         <key>UTTypeIconFiles</key>
                         <array/>
                         <key>UTTypeIdentifier</key>
-                        <string>org.amnezia.AmneziaVPN.wireguard-config</string>
+                        <string>com.phasmal.PhasmalVPN.wireguard-config</string>
                         <key>UTTypeTagSpecification</key>
                         <dict>
                                 <key>public.filename-extension</key>
@@ -145,7 +145,7 @@
                         <key>UTTypeIconFiles</key>
                         <array/>
                         <key>UTTypeIdentifier</key>
-                        <string>org.amnezia.AmneziaVPN.openvpn-config</string>
+                        <string>com.phasmal.PhasmalVPN.openvpn-config</string>
                         <key>UTTypeTagSpecification</key>
                         <dict>
                                 <key>public.filename-extension</key>
@@ -164,11 +164,11 @@
                                 <string>public.data</string>
                         </array>
                         <key>UTTypeDescription</key>
-                        <string>AmneziaVPN backup file</string>
+                        <string>PhasmalVPN backup file</string>
                         <key>UTTypeIconFiles</key>
                         <array/>
                         <key>UTTypeIdentifier</key>
-                        <string>org.amnezia.AmneziaVPN.backup-config</string>
+                        <string>com.phasmal.PhasmalVPN.backup-config</string>
                         <key>UTTypeTagSpecification</key>
                         <dict>
                                 <key>public.filename-extension</key>
@@ -186,15 +186,15 @@
         <array>
                 <dict>
                         <key>CFBundleTypeName</key>
-                        <string>Amnezia VPN config</string>
+                        <string>Phasmal VPN config</string>
                         <key>LSHandlerRank</key>
                         <string>Alternate</string>
                         <key>LSItemContentTypes</key>
                         <array>
-                                <string>org.amnezia.AmneziaVPN.amnezia-config</string>
-                                <string>org.amnezia.AmneziaVPN.wireguard-config</string>
-                                <string>org.amnezia.AmneziaVPN.openvpn-config</string>
-                                <string>org.amnezia.AmneziaVPN.backup-config</string>
+                                <string>com.phasmal.PhasmalVPN.amnezia-config</string>
+                                <string>com.phasmal.PhasmalVPN.wireguard-config</string>
+                                <string>com.phasmal.PhasmalVPN.openvpn-config</string>
+                                <string>com.phasmal.PhasmalVPN.backup-config</string>
                         </array>
                 </dict>
         </array>

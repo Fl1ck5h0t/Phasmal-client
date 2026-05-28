@@ -1,4 +1,4 @@
-package org.amnezia.vpn.util
+﻿package com.phasmal.vpn.util
 
 import android.annotation.SuppressLint
 import android.content.Context

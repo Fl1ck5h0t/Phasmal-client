@@ -1,4 +1,4 @@
-from conan import ConanFile
+﻿from conan import ConanFile
 from conan.tools.cmake import cmake_layout, CMake, CMakeToolchain
 from conan.tools.files import copy, apply_conandata_patches, export_conandata_patches
 from conan.tools.scm import Git
@@ -30,7 +30,7 @@ class OpenvpnPtAndroid(ConanFile):
     def source(self):
         git = Git(self)
         git.clone(
-            url="https://github.com/amnezia-vpn/openvpn-pt-android.git",
+            url="https://github.com/phasmal-vpn/openvpn-pt-android.git",
             target=".",
             args=["--recurse-submodules", "--branch", "update-ovpn3"]
         )

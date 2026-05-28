@@ -1,4 +1,4 @@
-import QtQuick
+﻿import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 
@@ -232,7 +232,7 @@ PageType {
                 text: qsTr("Detailed instructions")
 
                 clickedFunc: function() {
-                    // Qt.openUrlExternally("https://github.com/amnezia-vpn/desktop-client/releases/latest")
+                    // Qt.openUrlExternally("https://github.com/phasmal-vpn/desktop-client/releases/latest")
                 }
             }
         }

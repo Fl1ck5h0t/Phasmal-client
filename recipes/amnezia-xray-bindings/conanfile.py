@@ -1,4 +1,4 @@
-from conan import ConanFile
+﻿from conan import ConanFile
 from conan.tools.files import get, copy, collect_libs, chdir, rename
 from conan.tools.layout import basic_layout
 from conan.errors import ConanInvalidConfiguration
@@ -60,7 +60,7 @@ class AmneziaXrayBindings(ConanFile):
             )
 
     def source(self):
-        get(self, "https://github.com/amnezia-vpn/amnezia-xray-bindings/archive/v1.1.0.zip",
+        get(self, "https://github.com/phasmal-vpn/amnezia-xray-bindings/archive/v1.1.0.zip",
             sha256="6ea768ec7002cedd422a39aea17704b888acaf794432aa5937cfc92fb6d80eb5", strip_root=True)
 
     def generate(self):

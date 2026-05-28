@@ -1,4 +1,4 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
@@ -20,7 +20,7 @@
 #include "logger.h"
 #include "platforms/windows/windowsutils.h"
 
-constexpr const char* VPN_NAME = "AmneziaVPN";
+constexpr const char* VPN_NAME = "PhasmalVPN";
 constexpr const char* WIREGUARD_DIR = "AmneziaWG";
 constexpr const char* DATA_DIR = "Data";
 
@@ -134,7 +134,7 @@ int WindowsCommons::VPNAdapterIndex() {
   // For someReason QNetworkInterface::fromName(MozillaVPN) does not work >:(
   auto adapterList = QNetworkInterface::allInterfaces();
   for (const auto& adapter : adapterList) {
-    if (adapter.humanReadableName().contains("AmneziaVPN")) {
+    if (adapter.humanReadableName().contains("PhasmalVPN")) {
       return adapter.index();
     }
   }

@@ -1,4 +1,4 @@
-find_program(CONAN_COMMAND "conan" REQUIRED
+﻿find_program(CONAN_COMMAND "conan" REQUIRED
     HINTS
         "${CMAKE_SOURCE_DIR}/.venv/bin"
         "/opt/homebrew/bin"
@@ -13,5 +13,5 @@ foreach(RECIPE ${LOCAL_RECIPES})
 endforeach()
 
 execute_process(
-    COMMAND ${CONAN_COMMAND} remote add amnezia "https://artifactory.amnezia.org/artifactory/api/conan/client-prebuilts" --force
+    COMMAND ${CONAN_COMMAND} remote add amnezia "https://artifactory.phasmalvpn.com/artifactory/api/conan/client-prebuilts" --force
 )

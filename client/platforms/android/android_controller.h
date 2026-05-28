@@ -1,4 +1,4 @@
-#ifndef ANDROID_CONTROLLER_H
+﻿#ifndef ANDROID_CONTROLLER_H
 #define ANDROID_CONTROLLER_H
 
 #include <QJniObject>
@@ -18,7 +18,7 @@ public:
 
     bool initialize();
 
-    // keep synchronized with org.amnezia.vpn.protocol.ProtocolState
+    // keep synchronized with com.phasmal.vpn.protocol.ProtocolState
     enum class ConnectionState
     {
         DISCONNECTED,

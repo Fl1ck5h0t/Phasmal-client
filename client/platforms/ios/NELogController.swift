@@ -1,7 +1,7 @@
-import Foundation
+﻿import Foundation
 import os.log
 
-private let subsystemIdentifier = Bundle.main.bundleIdentifier ?? "org.amnezia.AmneziaVPN"
+private let subsystemIdentifier = Bundle.main.bundleIdentifier ?? "com.phasmal.PhasmalVPN"
 private let wireGuardSystemLogger = Logger(subsystem: subsystemIdentifier, category: "WireGuard")
 private let openVPNSystemLogger = Logger(subsystem: subsystemIdentifier, category: "OpenVPN")
 private let xraySystemLogger = Logger(subsystem: subsystemIdentifier, category: "Xray")

@@ -1,4 +1,4 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
@@ -54,14 +54,14 @@ void NotificationHandler::setConnectionState(Vpn::ConnectionState state)
     case Vpn::ConnectionState::Connected:
         m_connected = true;
 
-        title = tr("AmneziaVPN");
+        title = tr("PhasmalVPN");
         message = tr("VPN Connected");
         break;
 
     case Vpn::ConnectionState::Disconnected:
         if (m_connected) {
             m_connected = false;
-            title = tr("AmneziaVPN");
+            title = tr("PhasmalVPN");
             message = tr("VPN Disconnected");
         }
         break;
@@ -85,7 +85,7 @@ void NotificationHandler::unsecuredNetworkNotification(const QString& networkNam
     qDebug() << "Unsecured network notification shown";
 
 
-    QString title = tr("AmneziaVPN notification");
+    QString title = tr("PhasmalVPN notification");
     QString message = tr("Unsecured network detected: ") + networkName;
 
     notifyInternal(UnsecuredNetwork, title, message, 2000);

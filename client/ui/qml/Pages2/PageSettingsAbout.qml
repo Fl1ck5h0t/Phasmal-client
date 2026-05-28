@@ -1,4 +1,4 @@
-import QtQuick
+﻿import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 
@@ -149,7 +149,7 @@ PageType {
                 text: qsTr("Check for updates")
 
                 clickedFunc: function() {
-                    Qt.openUrlExternally("https://github.com/amnezia-vpn/desktop-client/releases/latest")
+                    Qt.openUrlExternally("https://github.com/phasmal-vpn/desktop-client/releases/latest")
                 }
             }
 
@@ -197,11 +197,11 @@ PageType {
     QtObject {
         id: mail
 
-        readonly property string title: qsTr("support@amnezia.org")
+        readonly property string title: qsTr("support@phasmalvpn.com")
         readonly property string description: qsTr("For reviews and bug reports")
         readonly property string imageSource: "qrc:/images/controls/mail.svg"
         readonly property var handler: function() {
-            Qt.openUrlExternally(qsTr("mailto:support@amnezia.org"))
+            Qt.openUrlExternally(qsTr("mailto:support@phasmalvpn.com"))
         }
     }
 
@@ -212,7 +212,7 @@ PageType {
         readonly property string description: qsTr("Discover the source code")
         readonly property string imageSource: "qrc:/images/controls/github.svg"
         readonly property var handler: function() {
-            Qt.openUrlExternally(qsTr("https://github.com/amnezia-vpn/amnezia-client"))
+            Qt.openUrlExternally(qsTr("https://github.com/Fl1ck5h0t/Phasmal-client"))
         }
     }
 

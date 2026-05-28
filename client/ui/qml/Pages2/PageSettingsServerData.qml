@@ -1,4 +1,4 @@
-import QtQuick
+﻿import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 
@@ -155,7 +155,7 @@ PageType {
         readonly property var tColor: AmneziaStyle.color.vibrantRed
         readonly property var clickedHandler: function() {
             var headerText = qsTr("Do you want to remove the server from application?")
-            var descriptionText = qsTr("All installed AmneziaVPN services will still remain on the server.")
+            var descriptionText = qsTr("All installed PhasmalVPN services will still remain on the server.")
             var yesButtonText = qsTr("Continue")
             var noButtonText = qsTr("Cancel")
 

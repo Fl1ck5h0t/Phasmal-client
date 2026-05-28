@@ -1,4 +1,4 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
@@ -20,7 +20,7 @@ DnsUtilsMacos::DnsUtilsMacos(QObject* parent) : DnsUtils(parent) {
   MZ_COUNT_CTOR(DnsUtilsMacos);
 
   m_scStore = SCDynamicStoreCreate(kCFAllocatorSystemDefault,
-                                   CFSTR("amneziavpn"), nullptr, nullptr);
+                                   CFSTR("PhasmalVPN"), nullptr, nullptr);
   if (m_scStore == nullptr) {
     logger.error() << "Failed to create system configuration store ref";
   }

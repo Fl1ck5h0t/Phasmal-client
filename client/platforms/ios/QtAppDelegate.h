@@ -1,8 +1,8 @@
-#if !MACOS_NE
+﻿#if !MACOS_NE
 #import <UIKit/UIKit.h>
 #endif
 @interface QIOSApplicationDelegate
 @end
 
-@interface QIOSApplicationDelegate (AmneziaVPNDelegate)
+@interface QIOSApplicationDelegate (PhasmalVPNDelegate)
 @end

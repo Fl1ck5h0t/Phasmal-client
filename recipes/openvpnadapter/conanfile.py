@@ -1,4 +1,4 @@
-from conan import ConanFile
+﻿from conan import ConanFile
 from conan.tools.layout import basic_layout
 from conan.tools.apple import is_apple_os
 from conan.errors import ConanInvalidConfiguration
@@ -42,7 +42,7 @@ class OpenVPNAdapter(ConanFile):
     def source(self):
         git = Git(self)
         git.clone(
-            url="https://github.com/amnezia-vpn/OpenVPNAdapter.git",
+            url="https://github.com/phasmal-vpn/OpenVPNAdapter.git",
             target=".",
             args=["--recurse-submodules", "--branch", "master-amnezia"]
         )

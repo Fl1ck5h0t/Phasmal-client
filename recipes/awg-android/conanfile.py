@@ -1,4 +1,4 @@
-from conan import ConanFile
+﻿from conan import ConanFile
 from conan.tools.cmake import cmake_layout, CMake, CMakeToolchain
 from conan.tools.files import copy, replace_in_file
 from conan.errors import ConanInvalidConfiguration
@@ -29,7 +29,7 @@ class AwgAndroid(ConanFile):
     def source(self):
         git = Git(self)
         git.clone(
-            url="https://github.com/amnezia-vpn/amneziawg-android.git",
+            url="https://github.com/phasmal-vpn/amneziawg-android.git",
             target=".",
             args=["--recurse-submodules", "--branch", f"v{self.version}"]
         )

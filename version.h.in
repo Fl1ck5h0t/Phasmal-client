@@ -1,4 +1,4 @@
-#ifndef VERSION_H
+﻿#ifndef VERSION_H
 #define VERSION_H
 
 #ifndef APP_VERSION
@@ -9,8 +9,8 @@
 #define APP_MAJOR_VERSION "@APP_MAJOR_VERSION@"
 #endif
 
-#define APPLICATION_NAME    "AmneziaVPN"
-#define SERVICE_NAME        "AmneziaVPN-service"
-#define ORGANIZATION_NAME   "AmneziaVPN.ORG"
+#define APPLICATION_NAME    "PhasmalVPN"
+#define SERVICE_NAME        "PhasmalVPN-service"
+#define ORGANIZATION_NAME   "PhasmalVPN.ORG"
 
 #endif  // VERSION_H

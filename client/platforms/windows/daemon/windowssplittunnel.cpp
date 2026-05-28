@@ -1,4 +1,4 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
@@ -119,7 +119,7 @@ using ProcessInfo = struct {
 
 constexpr static const auto DRIVER_SYMLINK = L"\\\\.\\MULLVADSPLITTUNNEL";
 constexpr static const auto DRIVER_FILENAME = "mullvad-split-tunnel.sys";
-constexpr static const auto DRIVER_SERVICE_NAME = L"AmneziaVPNSplitTunnel";
+constexpr static const auto DRIVER_SERVICE_NAME = L"PhasmalVPNSplitTunnel";
 constexpr static const auto MV_SERVICE_NAME = L"MullvadVPN";
 
 #pragma endregion

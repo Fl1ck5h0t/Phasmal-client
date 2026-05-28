@@ -1,4 +1,4 @@
-from conan import ConanFile
+﻿from conan import ConanFile
 from conan.tools.files import get, copy
 from conan.tools.layout import basic_layout
 from conan.errors import ConanInvalidConfiguration
@@ -29,7 +29,7 @@ class AmneziaLibxray(ConanFile):
             raise ConanInvalidConfiguration(f"{self.name} v{self.version} does not support {self.settings.os}")
 
     def source(self):
-        get(self, "https://github.com/amnezia-vpn/amnezia-libxray/archive/refs/tags/v1.0.0.zip",
+        get(self, "https://github.com/phasmal-vpn/amnezia-libxray/archive/refs/tags/v1.0.0.zip",
             sha256="0c50c5acd5063a9fc3cfbb5b3e11481d30cfa3762b3cb1d72130248ff498e9df", strip_root=True
         )
 

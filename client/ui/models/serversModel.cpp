@@ -1,4 +1,4 @@
-#include "serversModel.h"
+﻿#include "serversModel.h"
 
 #include "core/models/serverDescription.h"
 
@@ -13,7 +13,7 @@
 #include "core/utils/networkUtilities.h"
 
 #if defined(Q_OS_IOS) || defined(MACOS_NE)
-    #include <AmneziaVPN-Swift.h>
+    #include <PhasmalVPN-Swift.h>
 #endif
 
 #include "core/utils/api/apiUtils.h"

@@ -1,6 +1,6 @@
-from conan import ConanFile
+﻿from conan import ConanFile
 
-class AmneziaVPN(ConanFile):
+class PhasmalVPN(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
     generators = "VirtualBuildEnv", "CMakeConfigDeps"
 

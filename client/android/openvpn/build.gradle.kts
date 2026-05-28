@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     id(libs.plugins.android.library.get().pluginId)
     id(libs.plugins.kotlin.android.get().pluginId)
 }
@@ -8,7 +8,7 @@ kotlin {
 }
 
 android {
-    namespace = "org.amnezia.vpn.protocol.openvpn"
+    namespace = "com.phasmal.vpn.protocol.openvpn"
 }
 
 dependencies {

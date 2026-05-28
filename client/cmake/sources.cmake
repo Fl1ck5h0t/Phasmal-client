@@ -1,4 +1,4 @@
-set(CLIENT_ROOT_DIR ${CMAKE_CURRENT_LIST_DIR}/..)
+﻿set(CLIENT_ROOT_DIR ${CMAKE_CURRENT_LIST_DIR}/..)
 
 set(HEADERS ${HEADERS}
     ${CLIENT_ROOT_DIR}/core/utils/migrations.h
@@ -256,7 +256,7 @@ if(WIN32)
     )
 
     set(RESOURCES ${RESOURCES}
-        ${CMAKE_CURRENT_BINARY_DIR}/amneziavpn.rc
+        ${CMAKE_CURRENT_BINARY_DIR}/PhasmalVPN.rc
     )
 endif()
 

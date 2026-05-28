@@ -1,4 +1,4 @@
-package org.amnezia.vpn.protocol.xray
+﻿package com.phasmal.vpn.protocol.xray
 
 import android.content.Context
 import android.net.VpnService.Builder
@@ -8,20 +8,20 @@ import java.net.InetAddress
 import java.net.ServerSocket
 import java.util.UUID
 import go.Seq
-import org.amnezia.vpn.protocol.BadConfigException
-import org.amnezia.vpn.protocol.Protocol
-import org.amnezia.vpn.protocol.ProtocolState.CONNECTED
-import org.amnezia.vpn.protocol.ProtocolState.DISCONNECTED
-import org.amnezia.vpn.protocol.Statistics
-import org.amnezia.vpn.protocol.VpnStartException
-import org.amnezia.vpn.protocol.xray.libXray.DialerController
-import org.amnezia.vpn.protocol.xray.libXray.LibXray
-import org.amnezia.vpn.protocol.xray.libXray.Logger
-import org.amnezia.vpn.protocol.xray.libXray.Tun2SocksConfig
-import org.amnezia.vpn.util.Log
-import org.amnezia.vpn.util.net.InetNetwork
-import org.amnezia.vpn.util.net.ip
-import org.amnezia.vpn.util.net.parseInetAddress
+import com.phasmal.vpn.protocol.BadConfigException
+import com.phasmal.vpn.protocol.Protocol
+import com.phasmal.vpn.protocol.ProtocolState.CONNECTED
+import com.phasmal.vpn.protocol.ProtocolState.DISCONNECTED
+import com.phasmal.vpn.protocol.Statistics
+import com.phasmal.vpn.protocol.VpnStartException
+import com.phasmal.vpn.protocol.xray.libXray.DialerController
+import com.phasmal.vpn.protocol.xray.libXray.LibXray
+import com.phasmal.vpn.protocol.xray.libXray.Logger
+import com.phasmal.vpn.protocol.xray.libXray.Tun2SocksConfig
+import com.phasmal.vpn.util.Log
+import com.phasmal.vpn.util.net.InetNetwork
+import com.phasmal.vpn.util.net.ip
+import com.phasmal.vpn.util.net.parseInetAddress
 import org.json.JSONArray
 import org.json.JSONObject
 

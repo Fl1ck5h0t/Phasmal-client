@@ -1,4 +1,4 @@
-import QtQuick
+﻿import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import QtQuick.Dialogs
@@ -20,7 +20,7 @@ PageType {
     id: root
 
     property string configExtension: ".conf"
-    property string configCaption: qsTr("Save AmneziaVPN config")
+    property string configCaption: qsTr("Save PhasmalVPN config")
 
     BackButtonType {
         id: backButton

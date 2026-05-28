@@ -1,4 +1,4 @@
-import QtQuick
+﻿import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import QtQuick.Dialogs
@@ -104,11 +104,11 @@ PageType {
                             clickedFunction: function() {
                                 var fileName = ""
                                 if (GC.isMobile()) {
-                                    fileName = "AmneziaVPN.log"
+                                    fileName = "PhasmalVPN.log"
                                 } else {
                                     fileName = SystemController.getFileName(qsTr("Save"),
                                                                             qsTr("Logs files (*.log)"),
-                                                                            StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/AmneziaVPN",
+                                                                            StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/PhasmalVPN",
                                                                             true,
                                                                             ".log")
                                 }
@@ -265,7 +265,7 @@ PageType {
     }
 
     property list<QtObject> variants: [
-        amneziaVpn,
+        PhasmalVPN,
         selfHostVpn,
         backupRestore,
         fileOpen,
@@ -275,7 +275,7 @@ PageType {
     ]
     
     QtObject {
-        id: amneziaVpn
+        id: PhasmalVPN
 
         property string title: qsTr("VPN by Amnezia")
         property string description: qsTr("The easiest way to connect to the VPN")
@@ -297,7 +297,7 @@ PageType {
 
         property bool featuredAmneziaConnection: false
         property string title: qsTr("Self-hosted VPN")
-        property string description: qsTr("Configure Amnezia VPN on your own server")
+        property string description: qsTr("Configure Phasmal VPN on your own server")
         property string imageSource: "qrc:/images/controls/server.svg"
         property bool isVisible: true
         property var handler: function() {

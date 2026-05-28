@@ -1,4 +1,4 @@
-#include "serversController.h"
+﻿#include "serversController.h"
 #include "core/utils/serverConfigUtils.h"
 #include "core/utils/protocolEnum.h"
 #include "core/protocols/protocolUtils.h"
@@ -8,7 +8,7 @@
 #include "core/models/serverDescription.h"
 
 #if defined(Q_OS_IOS) || defined(MACOS_NE)
-    #include <AmneziaVPN-Swift.h>
+    #include <PhasmalVPN-Swift.h>
 #endif
 
 

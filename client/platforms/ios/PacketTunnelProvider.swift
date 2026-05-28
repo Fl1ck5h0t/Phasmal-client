@@ -1,4 +1,4 @@
-import Foundation
+﻿import Foundation
 import NetworkExtension
 import Network
 import os
@@ -12,7 +12,7 @@ enum TunnelProtoType: String {
 
 struct Constants {
   static let kDefaultPathKey = "defaultPath"
-  static let processQueueName = "org.amnezia.process-packets"
+  static let processQueueName = "com.phasmal.process-packets"
   static let kActivationAttemptId = "activationAttemptId"
   static let ovpnConfigKey = "ovpn"
   static let xrayConfigKey = "xray"

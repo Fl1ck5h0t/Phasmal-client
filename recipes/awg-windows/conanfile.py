@@ -1,4 +1,4 @@
-from conan import ConanFile
+﻿from conan import ConanFile
 from conan.tools.layout import basic_layout
 from conan.errors import ConanInvalidConfiguration
 from conan.tools.files import get, copy, chdir
@@ -62,7 +62,7 @@ class AwgWindows(ConanFile):
         self.requires("wintun/[*]")
 
     def source(self):
-        get(self, f"https://github.com/amnezia-vpn/amneziawg-windows/archive/refs/tags/v{self.version}.zip",
+        get(self, f"https://github.com/phasmal-vpn/amneziawg-windows/archive/refs/tags/v{self.version}.zip",
             sha256="1de472832b332515c96cdf14ea887edde42ed7ad173675280c51baa9a3ef62f2", strip_root=True)
         
     def generate(self):

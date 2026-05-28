@@ -1,4 +1,4 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
@@ -17,8 +17,8 @@
 #  include <sys/types.h>
 #  include <unistd.h>
 
-constexpr const char* TMP_PATH = "/tmp/amneziavpn.socket";
-constexpr const char* VAR_PATH = "/var/run/amneziavpn/daemon.socket";
+constexpr const char* TMP_PATH = "/tmp/PhasmalVPN.socket";
+constexpr const char* VAR_PATH = "/var/run/PhasmalVPN/daemon.socket";
 #endif
 
 namespace {
@@ -67,7 +67,7 @@ bool DaemonLocalServer::initialize() {
 
 QString DaemonLocalServer::daemonPath() const {
 #if defined(MZ_WINDOWS)
-  return "\\\\.\\pipe\\amneziavpn";
+  return "\\\\.\\pipe\\PhasmalVPN";
 #endif
 #if defined(MZ_MACOS) || defined(MZ_LINUX)
   QDir dir("/var/run");
@@ -76,19 +76,19 @@ QString DaemonLocalServer::daemonPath() const {
     return TMP_PATH;
   }
 
-  if (dir.exists("amneziavpn")) {
-    logger.debug() << "/var/run/amneziavpn seems to be usable";
+  if (dir.exists("PhasmalVPN")) {
+    logger.debug() << "/var/run/PhasmalVPN seems to be usable";
     return VAR_PATH;
   }
 
-  if (!dir.mkdir("amneziavpn")) {
-    logger.warning() << "Failed to create /var/run/amneziavpn";
+  if (!dir.mkdir("PhasmalVPN")) {
+    logger.warning() << "Failed to create /var/run/PhasmalVPN";
     return TMP_PATH;
   }
 
-  if (chmod("/var/run/amneziavpn", S_IRWXU | S_IRWXG | S_IRWXO) < 0) {
+  if (chmod("/var/run/PhasmalVPN", S_IRWXU | S_IRWXG | S_IRWXO) < 0) {
     logger.warning()
-        << "Failed to set the right permissions to /var/run/amneziavpn";
+        << "Failed to set the right permissions to /var/run/PhasmalVPN";
     return TMP_PATH;
   }
 

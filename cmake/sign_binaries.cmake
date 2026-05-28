@@ -1,4 +1,4 @@
-if(NOT DEFINED SIGNTOOL_SUBJECT_NAME)
+﻿if(NOT DEFINED SIGNTOOL_SUBJECT_NAME)
     set(SIGNTOOL_SUBJECT_NAME "$ENV{SIGNTOOL_SUBJECT_NAME}")
 endif()
 if(NOT DEFINED CODESIGN_SIGNATURE)
@@ -34,11 +34,11 @@ if(APPLE)
 
     file(GLOB_RECURSE execs "${bundle}/Contents/MacOS/*")
     set(client_exec ${execs})
-    list(FILTER client_exec INCLUDE REGEX [[AmneziaVPN$]])
+    list(FILTER client_exec INCLUDE REGEX [[PhasmalVPN$]])
     set(service_exec ${execs})
-    list(FILTER service_exec INCLUDE REGEX [[AmneziaVPN-service$]])
+    list(FILTER service_exec INCLUDE REGEX [[PhasmalVPN-service$]])
     set(other_execs ${execs})
-    list(FILTER other_execs EXCLUDE REGEX [[AmneziaVPN$|AmneziaVPN-service$]])
+    list(FILTER other_execs EXCLUDE REGEX [[PhasmalVPN$|PhasmalVPN-service$]])
 
     list(APPEND files "${frameworks}" "${dylibs}" "${other_execs}" "${service_exec}" "${client_exec}" "${bundle}")
 

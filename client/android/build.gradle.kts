@@ -1,4 +1,4 @@
-import com.android.build.gradle.internal.api.BaseVariantOutputImpl
+﻿import com.android.build.gradle.internal.api.BaseVariantOutputImpl
 
 plugins {
     alias(libs.plugins.android.application)
@@ -17,7 +17,7 @@ val qtTargetAbiList: String by gradleProperties
 val outputBaseName: String by gradleProperties
 
 android {
-    namespace = "org.amnezia.vpn"
+    namespace = "com.phasmal.vpn"
 
     buildFeatures {
         viewBinding = true
@@ -34,7 +34,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "org.amnezia.vpn"
+        applicationId = "com.phasmal.vpn"
         targetSdk = qtTargetSdkVersion.toInt()
 
         // keeps language resources for only the locales specified below

@@ -1,4 +1,4 @@
-# Third-Party Licenses
+﻿# Third-Party Licenses
 
 This project is licensed under the GNU General Public License v3.0.
 This file lists third-party software components used by this repository.
@@ -56,17 +56,17 @@ Each component is distributed under its own license as linked below.
 
 ## AmneziaWG Apple (WireGuard)
 
-- Source: https://github.com/amnezia-vpn/amneziawg-apple
+- Source: https://github.com/phasmal-vpn/amneziawg-apple
 - License: MIT License
-- License Text: https://github.com/amnezia-vpn/amneziawg-apple/blob/master/COPYING
+- License Text: https://github.com/phasmal-vpn/amneziawg-apple/blob/master/COPYING
 
 ---
 
 ## AmneziaWG Android
 
-- Source: https://github.com/amnezia-vpn/amneziawg-go
+- Source: https://github.com/phasmal-vpn/amneziawg-go
 - License: MIT License
-- License Text: https://github.com/amnezia-vpn/amneziawg-go/blob/master/LICENSE
+- License Text: https://github.com/phasmal-vpn/amneziawg-go/blob/master/LICENSE
 
 ---
 

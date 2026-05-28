@@ -1,4 +1,4 @@
-from conan import ConanFile
+﻿from conan import ConanFile
 from conan.errors import ConanInvalidConfiguration
 from conan.tools.layout import basic_layout
 from conan.tools.files import get, copy
@@ -41,7 +41,7 @@ class AwgGo(ConanFile):
             )
 
     def source(self):
-        get(self, f"https://github.com/amnezia-vpn/amneziawg-go/archive/refs/tags/v{self.version}.zip",
+        get(self, f"https://github.com/phasmal-vpn/amneziawg-go/archive/refs/tags/v{self.version}.zip",
             sha256="34da7d4189f215f3930de441548bc2a0c89d54d347a4fb85cb9c715fce6413aa", strip_root=True
         )
 

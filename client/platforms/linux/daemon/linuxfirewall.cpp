@@ -1,4 +1,4 @@
-// Copyright (c) 2023 Private Internet Access, Inc.
+﻿// Copyright (c) 2023 Private Internet Access, Inc.
 //
 // This file is part of the Private Internet Access Desktop Client.
 //
@@ -16,8 +16,8 @@
 // along with the Private Internet Access Desktop Client.  If not, see
 // <https://www.gnu.org/licenses/>.
 
-// Copyright (c) 2024 AmneziaVPN
-// This file has been modified for AmneziaVPN
+// Copyright (c) 2024 PhasmalVPN
+// This file has been modified for PhasmalVPN
 //
 // This file is based on the work of the Private Internet Access Desktop Client.
 // The original code of the Private Internet Access Desktop Client is copyrighted (c) 2023 Private Internet Access, Inc. and licensed under GPL3.

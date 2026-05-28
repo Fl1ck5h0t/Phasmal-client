@@ -3,8 +3,8 @@ cmake_minimum_required(VERSION 3.25.0 FATAL_ERROR)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(PROJECT AmneziaVPN)
-set(AMNEZIAVPN_VERSION 4.9.0.1)
+set(PROJECT PhasmalVPN)
+set(PHASMALVPN_VERSION 1.0.0.0)
 
 set(QT_CREATOR_SKIP_PACKAGE_MANAGER_SETUP ON CACHE BOOL "" FORCE)
 set(CMAKE_PROJECT_TOP_LEVEL_INCLUDES
@@ -13,9 +13,9 @@ set(CMAKE_PROJECT_TOP_LEVEL_INCLUDES
     ${CMAKE_SOURCE_DIR}/cmake/conan_provider.cmake
     CACHE STRING "" FORCE)
 
-project(${PROJECT} VERSION ${AMNEZIAVPN_VERSION}
-        DESCRIPTION "AmneziaVPN"
-        HOMEPAGE_URL "https://amnezia.org/"
+project(${PROJECT} VERSION ${PHASMALVPN_VERSION}
+        DESCRIPTION "PhasmalVPN"
+        HOMEPAGE_URL "https://phasmalvpn.com/"
 )
 
 # trigger conan to kick off `conan install` globally

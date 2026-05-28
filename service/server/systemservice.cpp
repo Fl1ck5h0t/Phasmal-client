@@ -1,4 +1,4 @@
-#include "version.h"
+﻿#include "version.h"
 #include "localserver.h"
 #include "systemservice.h"
 
@@ -15,7 +15,7 @@ char** s_argv = nullptr;
 SystemService::SystemService(int argc, char **argv)
     : QtService<QCoreApplication>(argc, argv, SERVICE_NAME)
 {
-    setServiceDescription("Service for AmneziaVPN");
+    setServiceDescription("Service for PhasmalVPN");
 
 #ifdef Q_OS_WIN
     if(argc > 2){
